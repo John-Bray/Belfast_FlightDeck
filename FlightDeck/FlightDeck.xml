@@ -4,6 +4,13 @@
 
 <PropertyList>
 <path>FlightDeck.ac</path>
+  <!--  basic instrument lighting -->
+  <animation><type>material</type><object-name>forLighting</object-name>
+    <emission><red>   0.028 </red><green> 0.014 </green><blue>  0.007 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>    
+    
 <!-- ==================================================================== ASI  (Pilot) --> 
 <animation><type>rotate</type><object-name>needle_ASI_panel2P</object-name>
     <property>/velocities/equivalent-kt</property>
