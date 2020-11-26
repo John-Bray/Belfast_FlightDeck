@@ -4,6 +4,7 @@
 
 <PropertyList>
 <path>FlightDeck.ac</path>
+  
   <!--  basic instrument lighting -->
   <animation><type>material</type><object-name>forLighting</object-name>
     <emission><red>   0.028 </red><green> 0.014 </green><blue>  0.007 </blue>
@@ -13,7 +14,7 @@
     
 <!-- ==================================================================== ASI  (Pilot) --> 
 <animation><type>rotate</type><object-name>needle_ASI_panel2P</object-name>
-    <property>/velocities/equivalent-kt</property>
+    <property>velocities/equivalent-kt</property>
     <interpolation>
       <entry><ind>   0 </ind><dep>  -5 </dep></entry>
       <entry><ind>  25 </ind><dep>   0 </dep></entry>
@@ -27,12 +28,12 @@
   <animation><type>rotate</type>            
     <object-name>ball_panel2P</object-name>
     <object-name>roll-pointer_panel2P</object-name>
-    <property>/orientation/roll-deg</property>
+    <property>orientation/roll-deg</property>
     <factor>-1</factor><axis><object-name>rotationRoll_panel2P</object-name></axis>
   </animation>    
-  <animation><type>rotate</type> <object-name>ball_panel2P</object-name>             <property>/orientation/pitch-deg</property>                           <factor>-1</factor> <axis><object-name>rotationPitch_panel2P</object-name></axis></animation> 
-  <animation><type>rotate</type> <object-name>needle.localiser_panel2P</object-name> <property>/instrumentation/nav[0]/heading-needle-deflection</property><factor>10</factor> <axis><object-name>rotateLocaliser_panel2P</object-name></axis></animation> 
-  <animation><type>rotate</type> <object-name>needle.glideslope_panel2P</object-name><property>/instrumentation/nav[0]/gs-needle-deflection</property>     <factor>5</factor>  <axis><object-name>rotateGS_panel2P</object-name></axis>></animation> 
+  <animation><type>rotate</type> <object-name>ball_panel2P</object-name>             <property>orientation/pitch-deg</property>                           <factor>-1</factor> <axis><object-name>rotationPitch_panel2P</object-name></axis></animation> 
+  <animation><type>rotate</type> <object-name>needle.localiser_panel2P</object-name> <property>instrumentation/nav[0]/heading-needle-deflection</property><factor>10</factor> <axis><object-name>rotateLocaliser_panel2P</object-name></axis></animation> 
+  <animation><type>rotate</type> <object-name>needle.glideslope_panel2P</object-name><property>instrumentation/nav[0]/gs-needle-deflection</property>     <factor>5</factor>  <axis><object-name>rotateGS_panel2P</object-name></axis>></animation> 
 
   <animation><type>select</type> <object-name>needle.localiser_panel2P</object-name><condition>    <property>instrumentation/nav/nav-loc</property></condition></animation>
   <animation><type>select</type> <object-name>flag.hdg_panel2P</object-name><condition><not>       <property>instrumentation/nav/nav-loc</property></not></condition></animation> 
@@ -40,11 +41,11 @@
   <animation><type>select</type> <object-name>flag.gs_panel2P</object-name><condition><not>        <property>instrumentation/nav/has-gs</property></not></condition></animation> 
   <animation><type>select</type> <object-name>flag.gyro_panel2P</object-name><condition><less-than><property>engines/engine[0]/rpm</property><value>100</value></less-than></condition></animation>
 <!-- =================================================================== Alt  (Pilot)  -->
-  <animation><type>rotate</type><object-name>needleThousands_Alt_panel2P</object-name><property>/position/altitude-ft</property><factor>0.036</factor><axis><object-name>rotationNeedles_Alt_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needleHundreds_Alt_panel2P</object-name> <property>/position/altitude-ft</property><factor>0.36</factor> <axis><object-name>rotationNeedles_Alt_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>drum10K_Alt_panel2P</object-name>        <property>/position/altitude-ft</property><factor>-0.0036</factor><axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation> 
-  <animation><type>rotate</type><object-name>drumK_Alt_panel2P</object-name>          <property>/position/altitude-ft</property><factor>-0.036</factor><axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>drumHundreds_Alt_panel2P</object-name>   <property>/position/altitude-ft</property><factor>-0.36</factor> <axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needleThousands_Alt_panel2P</object-name><property>position/altitude-ft</property><factor>0.036</factor><axis><object-name>rotationNeedles_Alt_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needleHundreds_Alt_panel2P</object-name> <property>position/altitude-ft</property><factor>0.36</factor> <axis><object-name>rotationNeedles_Alt_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>drum10K_Alt_panel2P</object-name>        <property>position/altitude-ft</property><factor>-0.0036</factor><axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation> 
+  <animation><type>rotate</type><object-name>drumK_Alt_panel2P</object-name>          <property>position/altitude-ft</property><factor>-0.036</factor><axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>drumHundreds_Alt_panel2P</object-name>   <property>position/altitude-ft</property><factor>-0.36</factor> <axis><object-name>rotationDrums_Alt_panel2P</object-name></axis></animation>
   
   <animation><type>textranslate</type><object-name>hpa.000_Alt_panel2P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>0.003386</factor><step>29.53</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
   <animation><type>textranslate</type><object-name>hpa.001_Alt_panel2P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>0.03386</factor> <step>2.953</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
@@ -52,7 +53,7 @@
   <animation><type>textranslate</type><object-name>hpa.003_Alt_panel2P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>3.386</factor>   <step>0.02953</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
 <!-- ==================================================================== VSI (Pilot)  -->
   <animation><type>rotate</type>  <object-name>needleVSI_panel2P</object-name>
-    <property>/velocities/vertical-speed-fps</property>
+    <property>velocities/vertical-speed-fps</property>
     <interpolation>
       <entry><ind>-100  </ind><dep>-172 </dep></entry>
       <entry><ind> -67  </ind><dep>-115 </dep></entry>
@@ -82,26 +83,26 @@
   
 <!-- ================================================================== HSI - NAV1+ILS -->
   <animation><type>translate</type>  <object-name>LOC_HSI_panel2P</object-name>
-    <property>/instrumentation/nav[0]/heading-needle-deflection</property>
+    <property>instrumentation/nav[0]/heading-needle-deflection</property>
     <factor>-0.1</factor>
     <axis><object-name>translation_LOC_HSI_panel2P</object-name></axis>
   </animation>
   <animation><type>translate</type>  <object-name>HSI_GS_HSI_panel2P</object-name>
-    <property>/instrumentation/nav[0]/gs-needle-deflection</property>
+    <property>instrumentation/nav[0]/gs-needle-deflection</property>
     <factor>0.5</factor>
     <axis><object-name>translation_GS_HSI_panel2P</object-name></axis>
   </animation>
   
-  <animation><type>rotate</type><object-name>disk_HSI_panel2P</object-name><property>/orientation/heading-deg</property><factor>-1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>disk_HSI_panel2P</object-name><property>orientation/heading-deg</property><factor>-1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
   <animation><type>rotate</type>
     <object-name>OBS_to_HSI_panel2P</object-name>
     <object-name>LOC_HSI_panel2P</object-name>
     <object-name>OBS_from_HSI_panel2P</object-name>
-	                                                                       <property>/orientation/heading-deg</property><factor>-1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
+	                                                                       <property>orientation/heading-deg</property><factor>-1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
   <animation><type>rotate</type>
     <object-name>OBS_to_HSI_panel2P</object-name>
     <object-name>LOC_HSI_panel2P</object-name>
-    <object-name>OBS_from_HSI_panel2P</object-name>	                       <property>/instrumentation/nav[0]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
+    <object-name>OBS_from_HSI_panel2P</object-name>	                       <property>instrumentation/nav[0]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_HSI_panel2P</object-name></axis></animation>
 
   <animation><type>select</type>  <object-name>LOC_HSI_panel2P</object-name>   <condition><property>instrumentation/nav/nav-loc</property></condition></animation> 
   <animation><type>select</type>  <object-name>HSI_GS_HSI_panel2P</object-name><condition><property>instrumentation/nav/has-gs</property></condition></animation>  
@@ -110,55 +111,84 @@
                                   <object-name>dist_2_HSI_panel2P</object-name>
                                   <object-name>dist_3_HSI_panel2P</object-name><condition><property>instrumentation/nav/data-is-valid</property></condition></animation> 
   
-  <animation><type>textranslate</type><object-name>brg_1_HSI_panel2P</object-name><property>/instrumentation/nav[0]/heading-deg</property><factor>0.001</factor><step>100</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
-  <animation><type>textranslate</type><object-name>brg_2_HSI_panel2P</object-name><property>/instrumentation/nav[0]/heading-deg</property><factor>0.01</factor>  <step>10</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
-  <animation><type>textranslate</type><object-name>brg_3_HSI_panel2P</object-name><property>/instrumentation/nav[0]/heading-deg</property><factor>0.1</factor>    <step>1</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>brg_1_HSI_panel2P</object-name><property>instrumentation/nav[0]/heading-deg</property><factor>0.001</factor><step>100</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>brg_2_HSI_panel2P</object-name><property>instrumentation/nav[0]/heading-deg</property><factor>0.01</factor>  <step>10</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>brg_3_HSI_panel2P</object-name><property>instrumentation/nav[0]/heading-deg</property><factor>0.1</factor>    <step>1</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
   
-  <animation><type>textranslate</type><object-name>dist_0_HSI_panel2P</object-name><property>/instrumentation/nav/nav-distance</property><factor>0.00000053996</factor><step>185200</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation> 
-  <animation><type>textranslate</type><object-name>dist_1_HSI_panel2P</object-name><property>/instrumentation/nav/nav-distance</property><factor>0.0000053996</factor>  <step>18520</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
-  <animation><type>textranslate</type><object-name>dist_2_HSI_panel2P</object-name><property>/instrumentation/nav/nav-distance</property><factor>0.000053996</factor>    <step>1852</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
-  <animation><type>textranslate</type><object-name>dist_3_HSI_panel2P</object-name><property>/instrumentation/nav/nav-distance</property><factor>0.00053996</factor>      <step>185.2</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>dist_0_HSI_panel2P</object-name><property>instrumentation/nav/nav-distance</property><factor>0.00000053996</factor><step>185200</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation> 
+  <animation><type>textranslate</type><object-name>dist_1_HSI_panel2P</object-name><property>instrumentation/nav/nav-distance</property><factor>0.0000053996</factor>  <step>18520</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>dist_2_HSI_panel2P</object-name><property>instrumentation/nav/nav-distance</property><factor>0.000053996</factor>    <step>1852</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>dist_3_HSI_panel2P</object-name><property>instrumentation/nav/nav-distance</property><factor>0.00053996</factor>      <step>185.2</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
     <!-- 1m = 0.00053996 nm  reverse = 1852  -->
 <!-- ==================================================================== RMI - NAV1+2 -->
-  <animation><type>rotate</type><object-name>disk_RMI_panel2P</object-name>      <property>/orientation/heading-deg</property>          <factor>-1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>disk_RMI_panel2P</object-name>      <property>orientation/heading-deg</property>          <factor>-1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
   <animation><type>rotate</type><object-name>needleNAV1_RMI_panel2P</object-name>
-                                <object-name>needleNAV2_RMI_panel2P</object-name><property>/orientation/heading-deg</property>          <factor>-1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needleNAV1_RMI_panel2P</object-name><property>/instrumentation/nav[0]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needleNAV2_RMI_panel2P</object-name><property>/instrumentation/nav[1]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation> 
+                                <object-name>needleNAV2_RMI_panel2P</object-name><property>orientation/heading-deg</property>          <factor>-1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needleNAV1_RMI_panel2P</object-name><property>instrumentation/nav[0]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needleNAV2_RMI_panel2P</object-name><property>instrumentation/nav[1]/heading-deg</property><factor>1</factor><axis><object-name>rotationDisk_RMI_panel2P</object-name></axis></animation> 
 
 <!-- =========================================================== Turn & Slip Indicator -->
-  <animation><type>rotate</type><object-name>ball_TSI_panel2P</object-name>  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property> <factor>5.729</factor><min-deg>-5</min-deg><max-deg>5</max-deg><axis><object-name>axis_ball_TSI_panel2P</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needle_TSI_panel2P</object-name><property>/instrumentation/turn-indicator/indicated-turn-rate</property><factor> 11.25 </factor>                                        <axis><object-name>axis_needle_TSI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>ball_TSI_panel2P</object-name>  <property>instrumentation/slip-skid-ball/indicated-slip-skid</property> <factor>5.729</factor><min-deg>-5</min-deg><max-deg>5</max-deg><axis><object-name>axis_ball_TSI_panel2P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_TSI_panel2P</object-name><property>instrumentation/turn-indicator/indicated-turn-rate</property><factor> 11.25 </factor>                                        <axis><object-name>axis_needle_TSI_panel2P</object-name></axis></animation>
 
 
 <!-- ================================================================================  -->
 <!-- ======================================================= Panel 2P, centre console  -->
 <!-- ================================================================================  -->
 
+<!-- ================================================================ ASI  (Enggineer) --> 
+<animation><type>rotate</type><object-name>needle_ASI_panel3P</object-name>
+    <property>velocities/equivalent-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  -5 </dep></entry>
+      <entry><ind>  25 </ind><dep>   0 </dep></entry>
+      <entry><ind>  43 </ind><dep> 324 </dep></entry>
+      <entry><ind>  60 </ind><dep> 378 </dep></entry>
+      <entry><ind> 250 </ind><dep> 720 </dep></entry>
+    </interpolation>
+    <axis><object-name>axis_ASI_panel3P</object-name></axis>
+  </animation>
+ <!-- =============================================================== Alt  (Engineer)  -->
+  <animation><type>rotate</type><object-name>needleThousands_Alt_panel3P</object-name><property>position/altitude-ft</property><factor>0.036</factor><axis><object-name>rotationNeedles_Alt_panel3P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needleHundreds_Alt_panel3P</object-name> <property>position/altitude-ft</property><factor>0.36</factor> <axis><object-name>rotationNeedles_Alt_panel3P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>drum10K_Alt_panel3P</object-name>        <property>position/altitude-ft</property><factor>-0.0036</factor><axis><object-name>rotationDrums_Alt_panel3P</object-name></axis></animation> 
+  <animation><type>rotate</type><object-name>drumK_Alt_panel3P</object-name>          <property>position/altitude-ft</property><factor>-0.036</factor><axis> <object-name>rotationDrums_Alt_panel3P</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>drumHundreds_Alt_panel3P</object-name>   <property>position/altitude-ft</property><factor>-0.36</factor> <axis> <object-name>rotationDrums_Alt_panel3P</object-name></axis></animation>
+  
+  <animation><type>textranslate</type><object-name>hpa.000_Alt_panel3P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>0.003386</factor><step>29.53</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>hpa.001_Alt_panel3P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>0.03386</factor> <step>2.953</step>  <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>hpa.002_Alt_panel3P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>0.3386</factor>  <step>0.2953</step> <axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+  <animation><type>textranslate</type><object-name>hpa.003_Alt_panel3P</object-name>  <property>instrumentation/altimeter/setting-inhg</property><factor>3.386</factor>   <step>0.02953</step><axis><x>0</x><y>-1</y><z>0</z></axis></animation>
+ 
+  
+  
+  
+  
+
   <animation><type>rotate</type><object-name>Gear_Port</object-name>
-                                <object-name>Gear_Stbd</object-name><property>/gear/gear/position-norm</property><factor>-60</factor><axis><object-name>axis_Gear_Port</object-name></axis></animation>
+                                <object-name>Gear_Stbd</object-name><property>gear/gear/position-norm</property><factor>-60</factor><axis><object-name>axis_Gear_Port</object-name></axis></animation>
   
   <!--Max = 30000 ish = 360 rotation  -->
-  <animation><type>rotate</type><object-name>needle_Tq_1</object-name>	<property>/engines/engine[0]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_1</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needle_Tq_2</object-name>	<property>/engines/engine[1]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_2</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needle_Tq_3</object-name>	<property>/engines/engine[2]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_3</object-name></axis></animation>    
-  <animation><type>rotate</type><object-name>needle_Tq_4</object-name>	<property>/engines/engine[3]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_4</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_Tq_1</object-name>	<property>engines/engine[0]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_1</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_Tq_2</object-name>	<property>engines/engine[1]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_2</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_Tq_3</object-name>	<property>engines/engine[2]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_3</object-name></axis></animation>    
+  <animation><type>rotate</type><object-name>needle_Tq_4</object-name>	<property>engines/engine[3]/torque-ftlb</property><factor>0.012</factor><axis><object-name>rotation_needle_Tq_4</object-name></axis></animation>
     
   <!-- 800 degC = 180 rotation  . . . 0.225 but there is no engine temp in the Belfast
        so we will just have to make something up-->
-  <animation><type>rotate</type><object-name>needle_T4_1</object-name>	<property>/engines/engine[0]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_1</object-name></axis></animation> 
-  <animation><type>rotate</type><object-name>needle_T4_2</object-name>	<property>/engines/engine[1]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_2</object-name></axis></animation>  
-  <animation><type>rotate</type><object-name>needle_T4_3</object-name>	<property>/engines/engine[2]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_3</object-name></axis></animation> 
-  <animation><type>rotate</type><object-name>needle_T4_4</object-name>	<property>/engines/engine[3]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_4</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_T4_1</object-name>	<property>engines/engine[0]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_1</object-name></axis></animation> 
+  <animation><type>rotate</type><object-name>needle_T4_2</object-name>	<property>engines/engine[1]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_2</object-name></axis></animation>  
+  <animation><type>rotate</type><object-name>needle_T4_3</object-name>	<property>engines/engine[2]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_3</object-name></axis></animation> 
+  <animation><type>rotate</type><object-name>needle_T4_4</object-name>	<property>engines/engine[3]/n2</property><factor>1.65</factor><axis><object-name>rotation_needle_T4_4</object-name></axis></animation>
   
 <!--Max 100% = 270 rotation   n2  = 70 .. 85 -->  
-  <animation><type>rotate</type><object-name>needle_RPM_1</object-name>	<property>/engines/engine[0]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_1</object-name></axis></animation> 
-  <animation><type>rotate</type><object-name>needle_RPM_2</object-name>	<property>/engines/engine[1]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_2</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needle_RPM_3</object-name>	<property>/engines/engine[2]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_3</object-name></axis></animation>
-  <animation><type>rotate</type><object-name>needle_RPM_4</object-name>	<property>/engines/engine[3]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_4</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_RPM_1</object-name>	<property>engines/engine[0]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_1</object-name></axis></animation> 
+  <animation><type>rotate</type><object-name>needle_RPM_2</object-name>	<property>engines/engine[1]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_2</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_RPM_3</object-name>	<property>engines/engine[2]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_3</object-name></axis></animation>
+  <animation><type>rotate</type><object-name>needle_RPM_4</object-name>	<property>engines/engine[3]/n2</property><factor>3.25</factor><axis><object-name>rotation_needle_RPM_4</object-name></axis></animation>
 
    <animation><type>rotate</type><object-name>needle_Flaps_Port</object-name>	
-	<property>/surface-positions/flap-pos-norm</property>
+	<property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0  </ind><dep>-50 </dep></entry>
       <entry><ind>1  </ind><dep> 50 </dep></entry>
@@ -166,7 +196,7 @@
 	<axis><object-name>axis_needle_Flaps_Port</object-name></axis>
   </animation>
   <animation><type>rotate</type><object-name>needle_Flaps_Stbd</object-name>	
-	<property>/surface-positions/flap-pos-norm</property>
+	<property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0  </ind><dep> 50 </dep></entry>
       <entry><ind>1  </ind><dep>-50 </dep></entry>
@@ -183,7 +213,7 @@
   <animation><type>select</type>
     <object-name>internals</object-name>
     <condition>
-      <not><property>warty/hide/internals</property><value>1</value></not>
+      <not><property>/warty/hide/internals</property><value>1</value></not>
     </condition>
   </animation>
 	
