@@ -136,7 +136,7 @@
 <!-- ======================================================= Panel 2P, centre console  -->
 <!-- ================================================================================  -->
 
-<!-- ================================================================ ASI  (Enggineer) --> 
+<!-- ================================================================= ASI  (Engineer) --> 
 <animation><type>rotate</type><object-name>needle_ASI_panel3P</object-name>
     <property>velocities/equivalent-kt</property>
     <interpolation>
