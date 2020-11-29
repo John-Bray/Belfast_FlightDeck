@@ -3,7 +3,7 @@ MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.6 0.6 0.6  emis 0.1 0
 OBJECT world
 kids 1
 OBJECT poly
-name "glass"
+name "windowframesINN"
 loc -15.5978 1.59726 0.118
 crease 45.000000
 numvert 94
