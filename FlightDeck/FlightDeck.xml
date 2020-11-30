@@ -205,6 +205,16 @@
 	<axis><object-name>axis_needle_Flaps_Stbd</object-name></axis>
   </animation>
   
+  
+  
+  <animation><type>rotate</type><object-name>leverThrottle</object-name>
+  <property>controls/engines/engine/throttle</property><factor>-40</factor>
+  <axis><object-name>axis_Throttles</object-name></axis></animation>
+  
+  
+    
+
+  
 <!-- this can be used to assign a property key / toggle / button / lod or whatever to hide/show the instruments -->
   <animation><name>internals</name>
     <object-name>Panel_2P</object-name>
