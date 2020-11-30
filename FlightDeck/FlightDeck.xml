@@ -5,8 +5,7 @@
 <PropertyList>
 <path>FlightDeck.ac</path>
 
-  <!--model> <path>deck_layout.ac</path></model>
-  <model> <path>windowframesINN.ac</path></model-->
+  <model><path>flightDeckShell.ac</path></model>
   <!--  basic instrument lighting -->
   <animation><type>material</type><object-name>forLighting</object-name>
     <emission><red>   0.028 </red><green> 0.014 </green><blue>  0.007 </blue>
